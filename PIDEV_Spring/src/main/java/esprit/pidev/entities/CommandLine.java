@@ -15,7 +15,7 @@ public class CommandLine implements Serializable {
 
 	private String type;
 
-	private int totalprice;
+	private double totalprice;
 
 	private static final long serialVersionUID = 1L;
 
@@ -69,11 +69,11 @@ public class CommandLine implements Serializable {
 		return produit;
 	}
 
-	public int getTotalprice() {
+	public double getTotalprice() {
 		return totalprice;
 	}
 
-	public void setTotalprice(int totalprice) {
+	public void setTotalprice(double totalprice) {
 		this.totalprice = totalprice;
 	}
 
