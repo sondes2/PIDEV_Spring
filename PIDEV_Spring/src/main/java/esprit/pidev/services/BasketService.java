@@ -24,6 +24,10 @@ public class BasketService {
 	@Autowired
 	CommandLineRepository commandelinerepos;
 
+	public Basket AddBasket(Basket b) {
+		return basketrepos.save(b);
+	}
+
 	public void putProductInBasket(int basketid, int productid) {
 
 		Basket basketManagedEntity = basketrepos.findById(basketid).get();

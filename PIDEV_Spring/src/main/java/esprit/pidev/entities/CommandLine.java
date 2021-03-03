@@ -17,6 +17,9 @@ public class CommandLine implements Serializable {
 
 	private double totalprice;
 
+	// @OneToOne
+	// private Command cmd;
+
 	private static final long serialVersionUID = 1L;
 
 	@ManyToOne
@@ -32,7 +35,7 @@ public class CommandLine implements Serializable {
 		// TODO Auto-generated constructor stub
 	}
 
-	public CommandLine(CommandLineId commandeLineId, String type, int totalprice, Basket basket, Product produit) {
+	public CommandLine(CommandLineId commandeLineId, String type, double totalprice, Basket basket, Product produit) {
 		super();
 		this.commandeLineId = commandeLineId;
 		this.type = type;

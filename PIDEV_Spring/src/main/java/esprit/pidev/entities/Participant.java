@@ -3,16 +3,13 @@ package esprit.pidev.entities;
 import java.io.Serializable;
 import java.util.List;
 
-import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
-import net.minidev.json.annotate.JsonIgnore;
-
-@Entity
+//@Entity
 public class Participant implements Serializable {
 	/**
 	 * 
@@ -28,7 +25,7 @@ public class Participant implements Serializable {
 	private String Email;
 	private Long PhoneNumber;
 	// @JsonBackReference
-	@JsonIgnore
+	// @JsonIgnore
 	@ManyToMany(mappedBy = "participants", fetch = FetchType.EAGER)
 	// @NotNull
 	private List<Donations> donations;
